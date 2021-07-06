@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smart.auth.mapper.PermissionMapper">
+  <resultMap id="BaseResultMap" type="com.smart.auth.entity.Permission">
+    <!--@mbg.generated-->
+    <!--@Table permission-->
+    <id column="per_id" jdbcType="INTEGER" property="perId" />
+    <result column="per_name" jdbcType="VARCHAR" property="perName" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="per_desc" jdbcType="VARCHAR" property="perDesc" />
+    <result column="is_del" jdbcType="INTEGER" property="isDel" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    per_id, per_name, create_date, per_desc, is_del
+  </sql>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smart.security.mapper.AdminMapper">
+  <resultMap id="BaseResultMap" type="com.smart.security.entity.Admin">
+    <!--@mbg.generated-->
+    <!--@Table `admin`-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="is_del" jdbcType="INTEGER" property="isDel" />
+    <result column="locked" jdbcType="BOOLEAN" property="locked" />
+    <result column="is_account_non_expired" jdbcType="BOOLEAN" property="isAccountNonExpired" />
+    <result column="is_credentials_non_expired" jdbcType="BOOLEAN" property="isCredentialsNonExpired" />
+    <result column="is_enabled" jdbcType="BOOLEAN" property="isEnabled" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, `password`, add_time, is_del, locked, is_account_non_expired, is_credentials_non_expired, 
+    is_enabled
+  </sql>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smart.auth.mapper.RolePermissionMapper">
+    <resultMap id="BaseRoleResultMap" type="com.smart.auth.dto.RoleDto" extends="com.smart.auth.mapper.RoleMapper.BaseResultMap">
+        <collection property="permissions" resultMap="BasePermissionResultMap" />
+    </resultMap>
+
+    <resultMap id="BasePermissionResultMap" type="com.smart.auth.dto.PermissionDto" extends="com.smart.auth.mapper.PermissionMapper.BaseResultMap">
+
+    </resultMap>
+
+    <select id="selectByRoleId" resultMap="BaseRoleResultMap">
+        SELECT p.per_id,p.per_name,per_desc
+        FROM permission p LEFT OUTER JOIN role_permission_relation rpr ON p.per_id = rpr.per_id
+        WHERE p.is_del = 0 and rpr.role_id = #{roleId}
+    </select>
+</mapper>

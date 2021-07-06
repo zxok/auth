@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+
+# 核心配置 其它省略
+jwt:
+  # 密匙KEY
+  secret: afafsfdsfsf
+  # Header KEY
+  token-header: Authorization
+  # Token前缀字符
+  token-prefix: smart-
+  # 过期时间 单位秒 1天后过期=86400 7天后过期=604800
+  expiration: 86400
+  # 配置不需要认证的接口
+  ant-matchers: "/login/**,/favicon.ico,/login,/logout"
+  # 有效时间
+  valid-time: 7
+

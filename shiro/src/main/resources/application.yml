@@ -1,0 +1,12 @@
+server:
+  port: 8818
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: "auth-server"
+
+shiro-redis:
+  redis-manager:
+    host: 119.23.237.187:6379
